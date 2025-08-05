@@ -1,248 +1,307 @@
-# Performance Analysis & Optimization Toolkit
+# Protocol Employees System
 
-A comprehensive suite of tools for analyzing and optimizing web application performance, focusing on bundle size, load times, and runtime optimizations.
+A modern, full-stack employee management system with AI chat capabilities built with React, Node.js, Express, MongoDB, and OpenAI integration.
 
-## 🚀 Quick Start
+## 🚀 Features
 
-### Run Complete Analysis
+### Core Features
+- **Employee Management**: Complete CRUD operations for employee data
+- **User Authentication**: Secure JWT-based authentication with role-based access
+- **AI Chat Assistant**: Integrated OpenAI-powered chat for HR assistance
+- **Dashboard Analytics**: Real-time statistics and data visualization
+- **Modern UI/UX**: Beautiful, responsive design with Material-UI
+- **Real-time Updates**: Live chat and data synchronization
+
+### AI Chat Capabilities
+- Employee statistics and queries
+- Department information
+- HR policy assistance
+- Company data insights
+- Natural language processing for HR tasks
+
+### User Roles
+- **Admin**: Full system access and user management
+- **HR**: Employee management and reporting
+- **Manager**: Team management and employee viewing
+- **Employee**: Profile access and AI chat
+
+## 🛠️ Tech Stack
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - Database
+- **Mongoose** - ODM for MongoDB
+- **JWT** - Authentication
+- **OpenAI API** - AI chat functionality
+- **Socket.io** - Real-time communication
+- **bcryptjs** - Password hashing
+
+### Frontend
+- **React 18** - UI framework
+- **Material-UI (MUI)** - Component library
+- **React Router** - Navigation
+- **React Query** - State management and caching
+- **React Hook Form** - Form handling
+- **Framer Motion** - Animations
+- **Recharts** - Data visualization
+- **Axios** - HTTP client
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js (v16 or higher)
+- MongoDB (local or cloud)
+- OpenAI API key (optional, for AI features)
+
+### Backend Setup
+
+1. Clone the repository:
 ```bash
-# Run both performance and bundle analysis
-node run-performance-analysis.js
-
-# Run with HTML report output
-node run-performance-analysis.js --html
-
-# Run only performance analysis
-node run-performance-analysis.js --performance-only
-
-# Run only bundle analysis
-node run-performance-analysis.js --bundle-only
+git clone <repository-url>
+cd protocol-employees-system
 ```
 
-### Individual Tool Usage
+2. Install root dependencies:
 ```bash
-# Performance analysis
-node performance-analyzer.js
-
-# Bundle analysis
-node bundle-analyzer.js
+npm install
 ```
 
-## 📊 What Gets Analyzed
-
-### Performance Analysis
-- **Project Type Detection**: React, Vue, Angular, Next.js, etc.
-- **Dependency Analysis**: Heavy libraries, duplicates, unused packages
-- **Code Patterns**: Large files, inline styles, console statements
-- **Bundle Configuration**: Webpack, Vite, Rollup, Parcel detection
-- **Framework-specific Recommendations**: Tailored optimization suggestions
-
-### Bundle Analysis
-- **Bundle Size**: Total size, file counts, largest files
-- **Code Splitting**: Chunk detection and recommendations
-- **Tree Shaking**: Configuration analysis
-- **Compression**: Gzip/Brotli detection
-- **Optimized Configurations**: Generated configs for Webpack, Vite, Rollup
-
-## 🛠️ Tools Included
-
-### 1. Performance Analyzer (`performance-analyzer.js`)
-Comprehensive performance analysis including:
-- Project type detection
-- Dependency analysis and recommendations
-- Code pattern analysis
-- Bundle configuration detection
-- Framework-specific optimization suggestions
-
-### 2. Bundle Analyzer (`bundle-analyzer.js`)
-Detailed bundle analysis featuring:
-- Build output analysis
-- Code splitting detection
-- Tree-shaking verification
-- Compression analysis
-- Optimized configuration generation
-
-### 3. Performance Monitor (`performance-monitor.js`)
-Real-time performance monitoring for:
-- Core Web Vitals (LCP, FID, CLS, TTFB)
-- Resource timing analysis
-- Long task detection
-- Custom metric tracking
-
-### 4. Optimization Examples (`optimization-examples.js`)
-Practical code examples for:
-- Code splitting strategies
-- React memoization patterns
-- List virtualization
-- Image optimization
-- Debouncing and throttling
-- Web Workers
-- Service Worker caching
-
-### 5. Performance Checklist (`performance-optimization-checklist.md`)
-Comprehensive guide covering:
-- Bundle size optimization
-- Load time improvements
-- Runtime performance
-- Framework-specific optimizations
-- Performance monitoring setup
-
-## 📁 Generated Files
-
-After running the analysis, you'll get:
-
-- `performance-report.json` - Detailed performance analysis data
-- `bundle-analysis-report.json` - Bundle analysis results
-- `performance-analysis-complete.json` - Combined results (with --json flag)
-- `performance-analysis-report.html` - HTML report (with --html flag)
-- `webpack.config.optimized.js` - Optimized Webpack config (if Webpack detected)
-- `vite.config.optimized.js` - Optimized Vite config (if Vite detected)
-- `rollup.config.optimized.js` - Optimized Rollup config (if Rollup detected)
-
-## 🎯 Performance Scoring
-
-The toolkit provides an overall performance score (0-100) based on:
-
-- **Critical Issues** (-15 points each): Large bundles, missing compression, poor code splitting
-- **Medium Issues** (-10 points each): Suboptimal configurations, heavy dependencies
-- **Low Issues** (-5 points each): Minor optimizations, cleanup tasks
-
-### Score Ranges
-- **90-100**: 🟢 Excellent - Well optimized
-- **75-89**: 🟡 Good - Minor improvements needed
-- **50-74**: 🟠 Fair - Several optimizations required
-- **0-49**: 🔴 Poor - Major optimization needed
-
-## 💡 Common Optimization Recommendations
-
-### Bundle Size Reduction
-- Replace heavy libraries (moment.js → date-fns, lodash → native methods)
-- Implement code splitting for routes and heavy components
-- Enable tree-shaking in bundler configuration
-- Remove unused dependencies
-
-### Load Time Optimization
-- Optimize images (WebP/AVIF formats, responsive images)
-- Implement lazy loading for images and components
-- Inline critical CSS
-- Add resource hints (preload, prefetch, dns-prefetch)
-
-### Runtime Performance
-- Use React.memo, useMemo, useCallback for expensive operations
-- Implement virtualization for large lists
-- Debounce user input handlers
-- Optimize state management to minimize re-renders
-
-## 🔧 Framework-Specific Features
-
-### React
-- Component memoization analysis
-- Hook optimization recommendations
-- Bundle splitting suggestions
-- Performance profiling tips
-
-### Vue
-- Computed property optimization
-- Component lazy loading
-- V-memo usage recommendations
-
-### Angular
-- OnPush change detection suggestions
-- Lazy loading module recommendations
-- Bundle budget configuration
-
-## 📊 Real-time Monitoring
-
-The performance monitor can be integrated into your application:
-
-```html
-<!-- Auto-start monitoring -->
-<html data-performance-monitor>
-```
-
-```javascript
-// Manual setup
-const monitor = new PerformanceMonitor({
-  reportInterval: 30000,
-  enableConsoleLogging: true,
-  enableWebVitals: true
-});
-monitor.start();
-
-// Listen for metrics
-document.addEventListener('performance-metric', (event) => {
-  console.log('Metric recorded:', event.detail);
-});
-```
-
-## 🚀 Usage Examples
-
-### Basic Analysis
+3. Install server dependencies:
 ```bash
-# Run complete analysis
-node run-performance-analysis.js
+cd server
+npm install
 ```
 
-### Advanced Usage
+4. Create environment file:
 ```bash
-# Generate HTML report
-node run-performance-analysis.js --html
-
-# JSON output for CI/CD integration
-node run-performance-analysis.js --json
-
-# Performance analysis only
-node run-performance-analysis.js --performance-only
+cp .env.example .env
 ```
 
-### Integration with Build Process
-```json
-{
-  "scripts": {
-    "build": "vite build",
-    "analyze": "npm run build && node run-performance-analysis.js --html",
-    "perf-check": "node performance-analyzer.js"
-  }
-}
+5. Update the `.env` file with your configuration:
+```env
+NODE_ENV=development
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/protocol-employees
+JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+CLIENT_URL=http://localhost:3000
+OPENAI_API_KEY=your-openai-api-key-here
 ```
 
-## 📈 Best Practices
+### Frontend Setup
 
-1. **Run analysis regularly** during development
-2. **Set performance budgets** for your team
-3. **Monitor Core Web Vitals** in production
-4. **Prioritize critical issues** for maximum impact
-5. **Use generated configurations** as starting points
-6. **Implement monitoring** for continuous insights
+1. Install client dependencies:
+```bash
+cd client
+npm install
+```
 
-## 🔍 Troubleshooting
+### Database Setup
 
-### No Build Output Found
-- Run your build command first (npm run build)
-- Check for dist/, build/, or out/ directories
+1. Start MongoDB service on your machine
+2. The application will automatically create the required collections
 
-### Analysis Not Detecting Framework
-- Ensure package.json exists with proper dependencies
-- Check that framework-specific files are present
+## 🏃‍♂️ Running the Application
 
-### Bundle Analysis Issues
-- Make sure you have a build output directory
-- Verify bundler configuration files exist
+### Development Mode
 
-## 📋 Requirements
+1. Start both server and client concurrently (from root directory):
+```bash
+npm run dev
+```
 
-- Node.js 14+ 
-- Existing web application project
-- Build output for bundle analysis (optional)
+Or start them separately:
+
+2. Start the backend server:
+```bash
+npm run server
+```
+
+3. Start the frontend client:
+```bash
+npm run client
+```
+
+### Production Mode
+
+1. Build the client:
+```bash
+npm run build
+```
+
+2. Start the production server:
+```bash
+npm start
+```
+
+## 🔐 Default Login Credentials
+
+For testing purposes, you can use these credentials or create a new account:
+
+```
+Email: admin@protocol.com
+Password: admin123
+Role: Admin
+```
+
+## 📱 Usage
+
+### Employee Management
+1. **Dashboard**: View system overview and statistics
+2. **Employees**: Manage employee records with full CRUD operations
+3. **Search & Filter**: Find employees by department, status, or search terms
+4. **Employee Details**: View comprehensive employee information
+
+### AI Chat Assistant
+1. **Natural Language Queries**: Ask questions about employees, departments, or HR policies
+2. **Quick Suggestions**: Use pre-defined questions for common tasks
+3. **Real-time Responses**: Get instant AI-powered assistance
+4. **Context Awareness**: AI understands your company data and context
+
+### User Management
+1. **Registration**: Create new user accounts with role assignment
+2. **Authentication**: Secure login with JWT tokens
+3. **Profile Management**: View and manage user profiles
+4. **Role-based Access**: Different permissions based on user roles
+
+## 🔧 Configuration
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NODE_ENV` | Environment mode | `development` |
+| `PORT` | Server port | `5000` |
+| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/protocol-employees` |
+| `JWT_SECRET` | JWT signing secret | Required |
+| `CLIENT_URL` | Frontend URL for CORS | `http://localhost:3000` |
+| `OPENAI_API_KEY` | OpenAI API key for AI features | Optional |
+
+### MongoDB Collections
+
+The system creates the following collections:
+- `users` - User accounts and authentication
+- `employees` - Employee records and information
+- `chatmessages` - AI chat history and messages
+
+## 🚀 Deployment
+
+### Backend Deployment
+1. Set production environment variables
+2. Use PM2 or similar process manager
+3. Configure reverse proxy (nginx)
+4. Set up SSL certificates
+
+### Frontend Deployment
+1. Build the React app: `npm run build`
+2. Serve static files via nginx or CDN
+3. Update API endpoints for production
+
+### Database
+- Use MongoDB Atlas for cloud hosting
+- Configure proper indexing for performance
+- Set up backup strategies
+
+## 🧪 Testing
+
+```bash
+# Run backend tests
+cd server
+npm test
+
+# Run frontend tests
+cd client
+npm test
+```
 
 ## 🤝 Contributing
 
-This toolkit is designed to be extensible. You can:
-- Add new analysis patterns
-- Extend framework-specific recommendations
-- Customize scoring algorithms
-- Add new bundler support
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## 📄 API Documentation
+
+### Authentication Endpoints
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - User login
+- `GET /api/auth/me` - Get current user
+
+### Employee Endpoints
+- `GET /api/employees` - Get employees with pagination
+- `POST /api/employees` - Create new employee
+- `GET /api/employees/:id` - Get employee by ID
+- `PUT /api/employees/:id` - Update employee
+- `DELETE /api/employees/:id` - Delete employee
+- `GET /api/employees/stats/overview` - Get employee statistics
+
+### Chat Endpoints
+- `POST /api/chat/ai-chat` - Send message to AI
+- `GET /api/chat/history/:room` - Get chat history
+- `GET /api/chat/employee-search` - Search employees for AI context
+
+## 🔒 Security Features
+
+- JWT token authentication
+- Password hashing with bcrypt
+- Rate limiting on API endpoints
+- Input validation and sanitization
+- CORS configuration
+- Helmet.js security headers
+- Role-based access control
+
+## 📈 Performance Optimizations
+
+- MongoDB indexing for fast queries
+- React Query for efficient data caching
+- Pagination for large datasets
+- Image optimization and lazy loading
+- Code splitting and bundle optimization
+- Gzip compression
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **MongoDB Connection Error**
+   - Ensure MongoDB is running
+   - Check connection string in `.env`
+   - Verify network connectivity
+
+2. **OpenAI API Issues**
+   - Verify API key is valid
+   - Check quota limits
+   - Ensure proper environment variable setup
+
+3. **CORS Errors**
+   - Check `CLIENT_URL` in server `.env`
+   - Verify frontend/backend URLs match
+
+4. **Build Errors**
+   - Clear node_modules and reinstall
+   - Check Node.js version compatibility
+   - Verify all dependencies are installed
+
+## 📞 Support
+
+For support and questions:
+- Create an issue in the repository
+- Check existing documentation
+- Review troubleshooting guide
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for AI capabilities
+- Material-UI team for the component library
+- MongoDB for the database solution
+- React and Node.js communities
 
 ---
 
-*Start optimizing your web application performance today! Run the analysis and follow the prioritized recommendations for maximum impact.* 
+Built with ❤️ by the Protocol Team 
