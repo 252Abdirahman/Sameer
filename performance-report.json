@@ -1,0 +1,33 @@
+{
+  "bundleAnalysis": {
+    "hasWebpack": false,
+    "hasVite": false,
+    "hasRollup": false,
+    "hasParcel": false,
+    "buildScripts": {}
+  },
+  "dependencyAnalysis": {},
+  "codeAnalysis": {
+    "largeFiles": [],
+    "inefficientPatterns": [
+      {
+        "file": "performance-analyzer.js",
+        "line": 185,
+        "issue": "DOM manipulation in component"
+      }
+    ],
+    "unusedImports": [],
+    "inlineStyles": 8,
+    "consoleStatements": 138
+  },
+  "recommendations": [
+    {
+      "category": "Production",
+      "priority": "Medium",
+      "issue": "Console statements in code",
+      "solution": "Remove console statements in production builds",
+      "count": 138
+    }
+  ],
+  "projectType": "unknown"
+}

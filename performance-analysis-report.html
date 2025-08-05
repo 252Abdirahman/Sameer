@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Analysis Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .score { font-size: 3em; font-weight: bold; color: #fd7e14; }
+        .section { margin: 30px 0; padding: 20px; border-radius: 8px; background: #f8f9fa; }
+        .issue { margin: 15px 0; padding: 15px; border-left: 4px solid #007bff; background: white; }
+        .priority-high { border-left-color: #dc3545; }
+        .priority-medium { border-left-color: #ffc107; }
+        .priority-low { border-left-color: #28a745; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Performance Analysis Report</h1>
+        <div class="score">65/100</div>
+        <p>Generated on 8/5/2025, 5:18:24 PM</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>📊 Summary</h3>
+            <p><strong>Total Issues:</strong> 4</p>
+            <p><strong>Critical Issues:</strong> 0</p>
+            <p><strong>Performance Score:</strong> 65/100</p>
+        </div>
+
+        <div class="card">
+            <h3>🔍 Analysis Types</h3>
+            <p><strong>Performance Analysis:</strong> ✅ Complete</p>
+            <p><strong>Bundle Analysis:</strong> ✅ Complete</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>💡 Recommendations</h2>
+        
+            <div class="issue priority-medium">
+                <h4>[Medium] Production: Console statements in code</h4>
+                <p><strong>Solution:</strong> Remove console statements in production builds</p>
+                
+                
+            </div>
+        
+            <div class="issue priority-medium">
+                <h4>[Medium] Tree Shaking: Tree-shaking not detected</h4>
+                <p><strong>Solution:</strong> Enable tree-shaking to remove unused code</p>
+                
+                
+            </div>
+        
+            <div class="issue priority-medium">
+                <h4>[Medium] Compression: Gzip compression not enabled</h4>
+                <p><strong>Solution:</strong> Enable gzip compression on your server</p>
+                
+                
+            </div>
+        
+            <div class="issue priority-low">
+                <h4>[Low] Compression: Brotli compression not enabled</h4>
+                <p><strong>Solution:</strong> Enable Brotli compression for better compression ratios</p>
+                
+                
+            </div>
+        
+    </div>
+
+    <div class="section">
+        <h2>📁 Resources</h2>
+        <ul>
+            <li><strong>performance-optimization-checklist.md</strong> - Complete optimization checklist</li>
+            <li><strong>optimization-examples.js</strong> - Practical code examples</li>
+            <li><strong>performance-monitor.js</strong> - Real-time monitoring tools</li>
+            <li><strong>performance-report.json</strong> - Detailed performance data</li>
+            <li><strong>bundle-analysis-report.json</strong> - Bundle analysis data</li>
+        </ul>
+    </div>
+</body>
+</html>

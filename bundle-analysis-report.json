@@ -1,0 +1,42 @@
+{
+  "bundler": null,
+  "buildSize": {},
+  "chunkAnalysis": {
+    "hasCodeSplitting": false,
+    "chunkFiles": [],
+    "vendorChunks": [],
+    "entryChunks": [],
+    "recommendations": []
+  },
+  "optimizations": [
+    {
+      "category": "Tree Shaking",
+      "priority": "Medium",
+      "issue": "Tree-shaking not detected",
+      "solution": "Enable tree-shaking to remove unused code"
+    },
+    {
+      "category": "Compression",
+      "priority": "Medium",
+      "issue": "Gzip compression not enabled",
+      "solution": "Enable gzip compression on your server"
+    },
+    {
+      "category": "Compression",
+      "priority": "Low",
+      "issue": "Brotli compression not enabled",
+      "solution": "Enable Brotli compression for better compression ratios"
+    }
+  ],
+  "treeshaking": {
+    "enabled": false,
+    "unusedExports": [],
+    "recommendations": []
+  },
+  "compression": {
+    "gzip": false,
+    "brotli": false,
+    "minification": false,
+    "recommendations": []
+  }
+}
